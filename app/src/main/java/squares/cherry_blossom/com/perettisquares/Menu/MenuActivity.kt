@@ -90,7 +90,6 @@ class MenuActivity : AppCompatActivity() {
                 googleSignInClient.signOut().addOnCompleteListener(this,
                         OnCompleteListener<Void> { task ->
                             val successful = task.isSuccessful
-                            Log.d("MMMM", "signOut(): " + if (successful) "success" else "failed")
 
                             onDisconnected()
                         })
