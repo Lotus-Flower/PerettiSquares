@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="9"
+    android:orientation="vertical"
+    android:background="@color/menuGreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="@string/score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/menuTextBrown"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_view_score_value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:textSize="100sp"
+        android:text="@string/high_score_initial_value"
+        />
+
+    <Button
+        android:id="@+id/button_play_again"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/high_score_menu_item_1"
+        android:textColor="@color/menuText"
+        android:layout_marginTop="25dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/menuPink"/>
+
+    <Button
+        android:id="@+id/button_high_score"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/high_score_menu_item_3"
+        android:textColor="@color/menuText"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/menuGold"/>
+
+    <Button
+        android:id="@+id/button_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/high_score_menu_item_2"
+        android:textColor="@color/menuText"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/menuBlue"/>
+
+</LinearLayout>

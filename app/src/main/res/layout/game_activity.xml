@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game.GameActivity"
+    android:id="@+id/layout_game"
+    android:orientation="vertical"
+    android:weightSum="20">
+
+    <LinearLayout
+        android:id="@+id/layout_score"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_1"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/text_view_time_value"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_1_initial"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/text_view_points"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_2"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/text_view_points_value"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_2_initial"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/text_view_streak"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_3"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/text_view_streak_value"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:text="@string/score_item_3_initial"
+            android:textColor="@color/menuText"
+            android:background="@color/colorAccent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_squares"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_square_1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorPrimary"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/button_square_2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorPrimary"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_square_3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorPrimary"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/button_square_4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorPrimary"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="@+id/layout_game"
+        android:id="@+id/button_restart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:text="@string/pause"
+        android:background="@color/colorAccent"
+        android:textColor="@color/menuText"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</LinearLayout>

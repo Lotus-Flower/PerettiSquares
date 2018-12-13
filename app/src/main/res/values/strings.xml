@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Peretti Squares</string>
+
+    <string name="menu_item_1">Sound is ON</string>
+    <string name="menu_item_1_toggle">Sound is OFF</string>
+    <string name="menu_item_2">Start Game</string>
+    <string name="menu_item_3">High Scores</string>
+
+    <string name="score_item_1">Time</string>
+    <string name="score_item_2">Points</string>
+    <string name="score_item_3">Streak</string>
+
+    <string name="score_item_1_initial">60</string>
+    <string name="score_item_2_initial">0</string>
+    <string name="score_item_3_initial">0</string>
+
+    <string name="high_score_menu_item_1">Play Again</string>
+    <string name="high_score_menu_item_2">Main Menu</string>
+    <string name="high_score_menu_item_3">Highscores</string>
+
+    <string name="high_score_initial_value">0</string>
+
+    <string name="pause">Pause</string>
+    <string name="restart">Restart</string>
+    <string name="resume">Resume</string>
+    <string name="main_menu">Main Menu</string>
+
+    <string name="score">You scored</string>
+    <string name="rank">You are ranked at</string>
+
+    <string name="sign_in_why">Sign in with Google to share your scores and achievements with your friends.</string>
+    <string name="you_are_signed_in">You are signed in with Google.</string>
+    <string name="sign_out">Sign out</string>
+</resources>

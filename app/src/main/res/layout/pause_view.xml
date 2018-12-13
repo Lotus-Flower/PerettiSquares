@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    android:background="@color/menuGreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/pause"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/menuText" />
+
+    <Button
+        android:id="@+id/button_pause_resume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:text="@string/resume"
+        android:background="@color/menuPink"/>
+
+    <Button
+        android:id="@+id/button_pause_restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:text="@string/restart"
+        android:background="@color/menuBlue"/>
+
+    <Button
+        android:id="@+id/button_pause_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:text="@string/main_menu"
+        android:background="@color/menuGold"/>
+
+</LinearLayout>

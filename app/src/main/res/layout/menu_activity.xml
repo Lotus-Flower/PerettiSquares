@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu.MenuActivity"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@color/menuGreen">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:textColor="@color/menuText"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/button_menu_sound"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/menu_item_1"
+            android:textColor="@color/menuText"
+            android:background="@color/menuPink"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/button_menu_start"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/menu_item_2"
+            android:textColor="@color/menuText"
+            android:background="@color/menuBlue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/button_menu_high_score"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/menu_item_3"
+            android:textColor="@color/menuText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_weight="1"
+            android:background="@color/menuGold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/sign_in_bar"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="#f0f0f0"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/button_menu_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_why"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#808080" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/sign_out_bar"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="#f0f0f0"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center|end"
+        android:padding="10dp">
+
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_signed_in"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#808080" />
+
+        <Button
+            android:id="@+id/button_menu_sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
