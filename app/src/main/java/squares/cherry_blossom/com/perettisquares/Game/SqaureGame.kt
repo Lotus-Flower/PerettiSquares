@@ -29,6 +29,10 @@ class SqaureGame(val view: GameActivity) {
 
     public fun setupGame(){
         setupColors()
+
+        score = 0
+        streak = 0
+
         correctIndex = getNewCorrectIndex()
         getNewColors()
         view.updateColors()

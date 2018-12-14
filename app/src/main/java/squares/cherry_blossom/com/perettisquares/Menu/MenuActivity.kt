@@ -17,10 +17,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.afollestad.materialdialogs.MaterialDialog
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.Auth
+import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.games.Games
 import squares.cherry_blossom.com.perettisquares.HighScores.HighScoreActivity
@@ -128,7 +126,6 @@ class MenuActivity : AppCompatActivity() {
         playersClient = Games.getPlayersClient(this, googleSignInAccount!!)
         playersClient.currentPlayer.addOnCompleteListener(object : OnCompleteListener<Player>{
             override fun onComplete(p0: Task<Player>) {
-
             }
 
         })
@@ -159,9 +156,26 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SIGN_IN) {
+            val result : GoogleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
+            if (result.isSuccess()) {
+                // The signed in account is stored in the result.
+                val signedInAccount = result.getSignInAccount()
+                showLeaderboard()
+            } else {
+                var message = result.getStatus().getStatusMessage()
+
+                if (message == null || message.isEmpty()) {
+                    message = "Error signing in with Google"
+                }
+
+                AlertDialog.Builder(this).setMessage(message)
+                    .setNeutralButton(android.R.string.ok, null).show()
+            }
+        }
 
         if (requestCode == RC_SIGN_IN && resultCode != 0){
-            showLeaderboard()
+
         }
     }
 }

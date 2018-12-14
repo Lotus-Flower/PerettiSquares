@@ -135,6 +135,7 @@ class GameActivity : AppCompatActivity() {
 
         restartButton.setOnClickListener {
             game.setupGame()
+            updatePoints(0, 0)
             updateTime(60000)
             dialog.dismiss()
         }
